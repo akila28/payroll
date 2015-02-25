@@ -1,0 +1,31 @@
+<h1>LIST OF EMPLOYEE ATTENDANCE DETAILS</h1>
+
+
+<div><table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table"><br />
+  <tr>
+    <th>Employee ID</th>
+    <th>Employee name</th>
+    <th>number of working days</th>
+    <th>casual leave</th>
+    <th>sick leave</th>
+    <th>earned leave</th>
+    <th>on duty</th>
+    <th>loss of pay</th>
+  </tr>
+
+
+   <tr>
+   <td><% for sal in @employee.sals %><%= sal.basic_paisa %><% end %></td>
+   <td><% for sal in @employee.sals %><%= sal.basic_paisa %><% end %></td>
+  <% @attendances.each do |attendance| %>
+    <td><%= attendance.wday %></td>
+    <td><%= attendance.cl %></td>
+    <td><%= attendance.sl %></td>
+    <td><%= attendance.el %></td>
+    <td><%= attendance.od %></td>
+    <td><%= attendance.lop %></td>
+   </tr>
+  <% end %>
+ </table>
+</div>
+

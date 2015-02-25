@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pf: 1
+  esi: 1
+  te: 1
+  share: 1
+
+two:
+  pf: 1
+  esi: 1
+  te: 1
+  share: 1

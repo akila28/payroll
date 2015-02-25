@@ -1,0 +1,45 @@
+<h1>LIST OF EMPLOYEE</h1>
+
+<div class='span6 offset6'>
+   <%= form_tag employees_path, :method => 'get', :class => "form-search" do %>
+   <%= text_field_tag :search, nil, :placeholder => "Enter the code", 
+      :class => "input-medium search-query" %>
+   <%= submit_tag "search!", :name => nil, :class => "btn" %><br /><br />
+   <% end %>
+</div><br /><br />
+
+
+<h6 class= "alert alert-info"><%= page_entries_info @customers %></h6>
+<div><table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table">
+  <tr>
+    <th>EMP CODE</th>
+    <th>EMP NAME</th>
+    <th>CATEGORY</th>
+    <th>DESIGNATION</th>
+    <th>BRANCH</th>
+    <th>ATTENDANCE DETAILS</th>
+    <th>DEDUCTION DETAILS</th>
+    <th>EMP SALARY DETAILS</th>
+    <th>DELETE</th>
+  </tr>
+
+  <% @employees.each do |employee| %>
+   <tr>
+    <td><%= employee.emp_code %></td>
+    <td><%= link_to "#{employee.emp_name}", employee_path(employee) %></td>
+    <td><%= employee.emp_category %></td>
+    <td><%= employee.emp_designation %></td>
+    <td><%= employee.emp_branch %></td>
+    <td><%= link_to "Add details",new_attendance_path(:id=>employee.id),class: "btn-primary btn" %></td>
+    <td><%= link_to "Add details", new_deduct_path(:id=>employee.id),class: "btn-primary btn" %></td>
+    <td><%= link_to "Add details", new_sal_path(:id=>employee.id),class: "btn-primary btn" %></td>
+    <td><%= link_to "Delete",employee_path(employee),class: "btn btn-danger",
+      method: :delete, confirm: "Are You Sure?" %></td>
+   </tr>
+  <% end %>
+ </table>
+
+
+<%= will_paginate @employees %>
+</div>
+<%= link_to "Add New Employee", new_employee_path,class: "btn" %>

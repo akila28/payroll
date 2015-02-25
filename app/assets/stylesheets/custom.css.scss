@@ -1,0 +1,82 @@
+@import "bootstrap";
+
+$grayMediumLight: #eaeaea;
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* table */
+
+th{
+   border:1px solid #C0C0C0;
+   color:#000000
+}
+
+td{
+   border:1px solid #C0C0C0;
+   color:#000000
+}
+
+
+/* homepage*/
+h2,h1
+{
+font-family: URW Palladio L;
+font-weight: bold;
+line-height: 30px;
+color: info;
+}
+
+/* small letters*/
+
+h6,h5,h4,h3
+{ 
+font-family: Sawasdee;
+font-weight: bold;
+}
+
+
+/* h1 */
+h1
+{
+color: #000000;
+}
+
+/* h4 */
+h4
+{
+color: #000000;
+}
+
+/* label */
+label.required:after{
+content: " *";
+color: red;
+cursor: help;
+}
+
+

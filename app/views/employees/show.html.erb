@@ -1,0 +1,57 @@
+<h1>Employee Details</h1><br />
+ <div class='span6 offset6'>
+  <%= link_to "Edit Employee Details",edit_employee_path(@employee),class: "btn-primary btn" %>
+  <%= link_to "Delete Employee",employee_path(@employee),class: "btn btn-danger",
+      method: :delete, confirm: "Are You Sure?" %>
+  <%= link_to "BACK", employees_path,class: "btn-primary btn" %>
+ </div><br />
+
+<h5><STRONG>NAME         :</STRONG> <%= @employee.emp_name %></h5>
+<h5><STRONG>EMPLOYEE CODE:</STRONG> <%= @employee.emp_code %></h5>
+<h5><STRONG>CATEGORY     :</STRONG> <%= @employee.emp_category %></h5>
+<h5><STRONG>DESIGNATION  :</STRONG> <%= @employee.emp_designation %></h5>
+<h5><STRONG>BRANCH       :</STRONG> <%= @employee.emp_branch %></h5>
+<h5><STRONG>JOINING DATE :</STRONG> <%= @employee.start_date %></h5>
+<h5><STRONG>END DATE     :</STRONG> <%= @employee.end_date %></h5><br />
+
+<h1>Attendance details</h1>
+ <div class='span6 offset6'>
+ <%= link_to "Edit",edit_attendance_path, class: "btn-primary btn" %>
+ </div><br />
+
+<h5>WORKING DAY  :<% for attendance in @employee.attendances %><%= attendance.wday %><% end %></h5>
+<h5>ATTEND DAY   :<% for attendance in @employee.attendances %><%= attendance.attend_day %><% end %></h5>
+<h5>ON-DUTY      :<% for attendance in @employee.attendances %><%= attendance.od %><% end %></h5>
+<h5>EARNED LEAVE :<% for attendance in @employee.attendances %><%= attendance.el %><% end %></h5>
+<h5>CASUAL LEAVE :<% for attendance in @employee.attendances %><%= attendance.cl %><% end %></h5>
+<h5>SPECIAL LEAVE:<% for attendance in @employee.attendances %><%= attendance.sl %><% end %></h5>
+<h5>LOSS OF PAY  :<% for attendance in @employee.attendances %><%= attendance.lop %><% end %></h5>
+
+<br /><h1>Salary details</h1>
+ <div class='span6 offset6'>
+ <%= link_to "Edit",edit_sal_path, class: "btn-primary btn" %>
+ </div><br />
+
+<h5>BASIC PAY          :<% for sal in @employee.sals %><%= sal.basic_paisa %><% end %></h5>
+<h5>DA                 :<% for sal in @employee.sals %><%= sal.da_paisa %><% end %></h5>
+<h5>HRA                :<% for sal in @employee.sals %><%= sal.hra_paisa %><% end %></h5>
+<h5>CCA                :<% for sal in @employee.sals %><%= sal.cca_paisa %><% end %></h5>
+<h5>SPL                :<% for sal in @employee.sals %><%= sal.spl_paisa %><% end %></h5>
+<h5>EXP                :<% for sal in @employee.sals %><%= sal.exp_paisa %><% end %></h5>
+<h5>TOTAL              :<% for sal in @employee.sals %><%= sal.total_paisa %><% end %></h5>
+<h5>GROSS              :<% for sal in @employee.sals %><%= sal.gross_paisa  %><% end %></h5>
+<h5>NET SALARY         :<% for sal in @employee.sals %><%= sal.net_sal_paisa %><% end %></h5>
+
+
+<br /><h1>Deduction details</h1>
+ <div class='span6 offset6'>
+ <%= link_to "Edit",edit_deduct_path, class: "btn-primary btn" %>
+ </div><br />
+
+<h5>PF                :<% for deduct in @employee.deducts %><%= deduct.pf %><% end %></h5>
+<h5>ESI               :<% for deduct in @employee.deducts %><%= deduct.esi %><% end %></h5>
+<h5>TE                :<% for deduct in @employee.deducts %><%= deduct.te %><% end %></h5>
+<h5>SHARE             :<% for deduct in @employee.deducts %><%= deduct.share %><% end %></h5>
+
+<br /><%= link_to "Back",employees_path(@employee),class: "btn-primary btn" %>
+<br /><br />

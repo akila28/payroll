@@ -1,0 +1,23 @@
+<h1> EDIT SALARY DETAILS</h1>
+<%= form_for @sal do |f| %>
+
+<h4><%= f.label :basic, class:'required' %></h4>
+<h4><%= f.text_field :basic_paisa %></h4>
+
+<h4><%= f.label :da, class:'required' %></h4>
+<h4><%= f.text_field :da_paisa %></h4>
+
+<h4><%= f.label :hra, class:'required' %></h4>
+<h4><%= f.text_field :hra_paisa %></h4>
+
+<h4><%= f.label :cca, class:'required' %></h4>
+<h4><%= f.text_field :cca_paisa %></h4>
+
+<h4><%= f.label :spl, class:'required' %></h4>
+<h4><%= f.text_field :spl_paisa %></h4>
+
+<h4><%= f.label :exp, class:'required' %></h4>
+<h4><%= f.text_field :exp_paisa %></h4>
+
+<fieldset class="form-actions"> <%= f.submit "UPDATE", class: "btn btn-primary" %></field>
+<% end %>

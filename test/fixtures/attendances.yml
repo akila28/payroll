@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  wday: 1
+  attend_day: 1
+  od: 1
+  el: 1
+  cl: 1
+  sl: 1
+  lop: 1
+
+two:
+  wday: 1
+  attend_day: 1
+  od: 1
+  el: 1
+  cl: 1
+  sl: 1
+  lop: 1

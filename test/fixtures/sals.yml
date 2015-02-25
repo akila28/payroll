@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  basic_paisa: 1
+  basic_currency: MyString
+  da_paisa: 1
+  da_currency: MyString
+  hra_paisa: 1
+  hra_currency: MyString
+  cca_paisa: 1
+  cca_currency: MyString
+  spl_paisa: 1
+  spl_currency: MyString
+  exp_paisa: 1
+  exp_currency: MyString
+  total_paisa: 1
+  total_currency: MyString
+
+two:
+  basic_paisa: 1
+  basic_currency: MyString
+  da_paisa: 1
+  da_currency: MyString
+  hra_paisa: 1
+  hra_currency: MyString
+  cca_paisa: 1
+  cca_currency: MyString
+  spl_paisa: 1
+  spl_currency: MyString
+  exp_paisa: 1
+  exp_currency: MyString
+  total_paisa: 1
+  total_currency: MyString

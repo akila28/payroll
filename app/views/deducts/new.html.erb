@@ -1,0 +1,19 @@
+<h1>Allowance DETAILS</h1>
+
+<%= form_for @deduct do |f| %>
+<%= f.hidden_field :employee_id, :value => params[:id] %>
+<h4><%= f.label :pf, class:'required' %></h4>
+<h4><%= f.text_field :pf %></h4>
+
+<h4><%= f.label :esi, class:'required' %></h4>
+<h4><%= f.text_field :esi %></h4>
+
+<h4><%= f.label :te, class:'required' %></h4>
+<h4><%= f.text_field :te %></h4>
+
+<h4><%= f.label :share, class:'required' %></h4>
+<h4><%= f.text_field :share %></h4>
+
+
+<fieldset class="form-actions"> <%= f.submit "Create", class: "btn btn-primary" %></field>
+<% end %>

@@ -1,0 +1,29 @@
+
+<h1>Add Employee Attendance Details</h1>
+ <%= form_for @attendance  do |b| %>
+
+
+<h4><%= b.label :number_of_working_days %></h4>
+<h4><%= b.text_field :wday, :value => 26, :readonly => true %></h4>
+
+
+<h4><%= b.label :casual_leave, class:'required' %></h4>
+<h4><%= b.text_field :cl %></h4>
+
+
+<h4><%= b.label :sick_leave, class:'required' %></h4>
+<h4><%= b.text_field :sl %></h4>
+
+
+<h4><%= b.label :earned_leave, class:'required' %></h4>
+<h4><%= b.text_field :el %></h4>
+
+
+<h4><%= b.label :on_duty, class:'required' %></h4>
+<h4><%= b.text_field :od %></h4>
+
+<h4><%= b.label :loss_of_pay, class:'required' %></h4>
+<h4><%= b.text_field :lop %></h4>
+<fieldset class="form-actions"> <%= b.submit "UPDATE", class: "btn btn-primary" %></field>
+<% end %>
+<br /><br /><br />
